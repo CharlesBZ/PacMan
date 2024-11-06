@@ -1,0 +1,72 @@
+game-engine:
+  # Window configuration
+  window:
+    title: "Game Engine"
+    width: 800
+    height: 600
+    fullscreen: false
+    vsync: true
+    resizable: true # Allows window resizing
+    aspectRatio: "16:9" # Set aspect ratio
+
+  # Graphics settings
+  graphics:
+    maxFPS: 60
+    antialiasing: true
+    renderDistance: 1000
+    textureQuality: "high" # Options: low, medium, high
+    shadowQuality: "medium" # Options: low, medium, high
+    postProcessing:
+      bloom: true
+      motionBlur: false
+
+  # Physics configuration
+  physics:
+    gravity: 9.81
+    timestep: 0.016 # 60 updates per second
+    collisionDetection: true
+    airResistance: 0.1 # Air resistance for physics objects
+    friction: 0.5 # General friction setting
+    physicsIterations: 10 # Number of physics calculation iterations per frame
+
+  # Audio settings
+  audio:
+    masterVolume: 1.0
+    musicVolume: 0.8
+    soundEffectsVolume: 0.7
+    voiceVolume: 0.9 # Volume for character voices
+    spatialAudio: true # Enable 3D spatial audio
+
+  # Resource paths
+  resources:
+    textures: "assets/textures/"
+    sounds: "assets/sounds/"
+    models: "assets/models/"
+    shaders: "assets/shaders/" # Path for custom shaders
+
+  # Debug settings
+  debug:
+    enabled: true
+    showFPS: true
+    showCollisionBoxes: false
+    logLevel: "INFO"
+    devConsole: true # Enables developer console
+    performanceOverlay: true # Shows CPU/GPU usage in real-time
+
+  # Input configuration
+  input:
+    mouseEnabled: true
+    keyboardEnabled: true
+    controllerEnabled: true
+    keyBindings: # Custom key bindings
+      moveForward: "W"
+      moveBackward: "S"
+      moveLeft: "A"
+      moveRight: "D"
+    mouseSensitivity: 1.0 # Mouse sensitivity setting
+    controllerLayout: "default" # Options for custom layouts
+
+  # Scene management
+  scenes:
+    defaultScene: "mainMenu"
+    loadingScreen: true
